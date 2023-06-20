@@ -70,6 +70,7 @@ Documentation to install szip: https://apolo-docs.readthedocs.io/en/latest/softw
 Download website: https://support.hdfgroup.org/ftp/lib-external/szip/2.1.1/src/szip-2.1.1.tar.gz 
 
 **1. configure**
+
 Set environment before configure, i.e., CC, FC, CXX
 prefix: specify the directory where to install. (Different from the location of the source code)
 
@@ -119,7 +120,7 @@ vi make_install.log
 ```
 
 
-zlib-1.2.11
+### zlib-1.2.11
 
 install zlib-1.2.11 using GCC/4.8.2
 https://sourceforge.net/projects/libpng/files/zlib/1.2.11/ 
@@ -130,7 +131,7 @@ https://sourceforge.net/projects/libpng/files/zlib/1.2.11/
 3. make install
 (base) [Tue Jun 16 16:58:28 vy57456 zlib-1.2.11]$make install >&make_install.log
 
-hdf5-1.10.4
+### hdf5-1.10.4
 Installing HDF (hdf5-1.10.4) on WSC using pgi
 module load pgi/18.10
 Download links:
@@ -163,7 +164,7 @@ CC=/opt/pgi/linuxpower/18.10/bin/pgcc CXX=/opt/pgi/linuxpower/18.10/bin/pgc++ FC
 
 
 
-netcdf-4.6.1 (C)
+### netcdf-4.6.1 (C)
 Install netcdf-4.6.1 (C) using GCC/4.8.2
 Donwload website: https://downloads.unidata.ucar.edu/netcdf/ 
 1. configure
@@ -212,7 +213,7 @@ previous it was
 export LIBS="-lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lz -lcurl "
 
 
-netcdf-fortran-4.4.4
+### netcdf-fortran-4.4.4
 
 Install netcdf-fortran-4.4.4
 Download website: https://github.com/Unidata/netcdf-fortran/tags 
@@ -275,7 +276,7 @@ The issue was caused by the flags "-lhdf5_hl" and "-lhdf5"
 set LIBS as
 (base) [Wed Jun 17 15:52:46 vy57456 netcdf-fortran-4.4.4]$export LIBS="-lm -lz -lcurl "
 
-mpich-3.2.1
+### mpich-3.2.1
 Install MPICH (mpich-3.2.1) on maya using gcc (module load gcc/4.8.4)
 Download website: https://www.mpich.org/downloads/versions/
 
