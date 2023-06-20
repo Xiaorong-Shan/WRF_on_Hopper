@@ -34,10 +34,29 @@ mkdir source_code
 cd source_code
 ```
 
+Load necessary modules
+```
+module load
+```
 
+Find CC, FC and CXX path. 
+```
+which icc
+```
 
+Go into bash file
+```
+vi ~/.bashrc
+```
 
-
+Put the following path into bash file with vi
+```
+module load intel/2020.2
+export PATH=/opt/intel/2020.2/compilers_and_libraries_2020.2.254/linux/bin/intel64:$PATH
+export CC=/opt/intel/2020.2/compilers_and_libraries_2020.2.254/linux/bin/intel64/icc
+export FC=/opt/intel/2020.2/compilers_and_libraries_2020.2.254/linux/bin/intel64/ifort
+export CXX=/opt/intel/2020.2/compilers_and_libraries_2020.2.254/linux/bin/intel64/icpc
+```
 
 ## Install libraries
 
