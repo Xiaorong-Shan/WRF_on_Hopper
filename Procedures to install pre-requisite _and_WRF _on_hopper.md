@@ -15,7 +15,25 @@ General procedures to install softwares on Linux:
 2. make
 3. make check
 4. make install 
-It’s necessary to save log files in each step using >&log. 
+It’s necessary to save log files in each step using >&log. and check log file in each steps to make sure there's no errors
+
+## Directory and path setting
+Before we install all the libraries, it's necessary to set up a new directory and environment for WRF.
+
+Create a directory where you want to put all the libraries.
+
+```
+cd /projects/HAQ_LAB/xshan2/WRF/
+mkdir pre-softwares
+cd pre-softwares
+```
+
+
+
+
+
+
+
 
 szip-2.1.1
 
