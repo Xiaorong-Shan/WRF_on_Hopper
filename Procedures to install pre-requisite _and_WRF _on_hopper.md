@@ -39,9 +39,11 @@ Load necessary modules
 module load
 ```
 
-Find CC, FC and CXX path. 
+Find CC (icc), FC (ifort) and CXX (icpc) path. 
 ```
 which icc
+which ifort
+which icpc
 ```
 
 Go into bash file
