@@ -75,16 +75,36 @@ prefix: specify the directory where to install. (Different from the location of 
 
 2. make
 
-(base) [Tue Jun 16 16:00:01 vy57456 szip-2.1.1]$make >& make.log
+```
+make >& make.log
+```
+
+check if there's any error 
+```
+vi make.log
+```
 
 3. make check
 
-(base) [Tue Jun 16 16:00:15 vy57456 szip-2.1.1]$make check >&make_check.log
+```
+make check >&make_check.log
+```
+
+check if there's any error 
+```
+vi make_check.log
+```
 
 4. make install
 
-(base) [Tue Jun 16 16:02:16 vy57456 szip-2.1.1]$make install >&make_install.log
+```
+make install >&make_install.log
+```
 
+check if there's any error 
+```
+vi make_install.log
+```
 
 
 zlib-1.2.11
