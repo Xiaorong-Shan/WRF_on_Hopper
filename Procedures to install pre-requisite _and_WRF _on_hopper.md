@@ -28,12 +28,18 @@ mkdir pre-softwares
 cd pre-softwares
 ```
 
+Make another file where we save all the original download files
+```
+mkdir source_code
+cd source_code
+```
 
 
 
 
 
 
+## Install libraries
 
 szip-2.1.1
 
