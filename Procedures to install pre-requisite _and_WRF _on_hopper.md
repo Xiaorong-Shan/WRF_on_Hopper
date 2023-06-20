@@ -67,7 +67,7 @@ Install szip-2.1.1 using GCC/4.8.2
 Documentation to install szip: https://apolo-docs.readthedocs.io/en/latest/software/scientific_libraries/Szip/Szip-2.1.1/index.html
 Download website: https://support.hdfgroup.org/ftp/lib-external/szip/2.1.1/src/szip-2.1.1.tar.gz 
 
-1. configure
+**1. configure**
 Set environment before configure, i.e., CC, FC, CXX
 prefix: specify the directory where to install. (Different from the location of the source code)
 
@@ -82,7 +82,7 @@ Start to configure the library
 ./configure prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/szip-2.1.1
 ```
 
-2. make
+**2. make**
 
 ```
 make >& make.log
@@ -93,7 +93,7 @@ check if there's any error
 vi make.log
 ```
 
-3. make check
+**3. make check**
 
 ```
 make check >&make_check.log
@@ -104,7 +104,7 @@ check if there's any error
 vi make_check.log
 ```
 
-4. make install
+**4. make install**
 
 ```
 make install >&make_install.log
