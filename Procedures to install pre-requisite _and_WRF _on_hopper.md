@@ -60,7 +60,7 @@ export CXX=/opt/intel/2020.2/compilers_and_libraries_2020.2.254/linux/bin/intel6
 
 ## Install libraries
 
-szip-2.1.1
+### szip-2.1.1
 
 Install szip-2.1.1 using GCC/4.8.2
 
@@ -71,7 +71,16 @@ Download website: https://support.hdfgroup.org/ftp/lib-external/szip/2.1.1/src/s
 Set environment before configure, i.e., CC, FC, CXX
 prefix: specify the directory where to install. (Different from the location of the source code)
 
-(base) [Tue Jun 16 16:06:55 vy57456 szip-2.1.1]$./configure CC=/usr/ebuild/software/GCC/4.8.2/bin/gcc FC=/usr/ebuild/software/GCC/4.8.2/bin/gfortran CXX=/usr/ebuild/software/GCC/4.8.2/bin/c++ --prefix=/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1
+Build a new file to save szip-2.1.1 documents in pre-softwares directory
+
+```
+mkdir szip-2.1.1
+```
+
+Start to configure the library
+```
+./configure prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/szip-2.1.1
+```
 
 2. make
 
