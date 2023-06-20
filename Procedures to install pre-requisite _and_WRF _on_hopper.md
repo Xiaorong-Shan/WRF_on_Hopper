@@ -1,4 +1,4 @@
-Procedures to install pre-requisite and WRF on taki (UMBC)
+Procedures to install pre-requisite and WRF on hopper
 
 
 
@@ -9,7 +9,7 @@ Linux taki-usr1 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 
 
 
 
-Pre-requisite
+# Pre-requisite
 General procedures to install softwares on Linux: 
 1. configure
 2. make
