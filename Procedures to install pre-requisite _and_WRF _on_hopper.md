@@ -33,6 +33,13 @@ Make another file where we save all the original download files
 mkdir source_code
 cd source_code
 ```
+Download necessary tar.gz file from https://drive.google.com/drive/folders/1RUBF1R8L-bNvVQwWsFB7dwVCh_5wIdCX
+
+Untar the file, for example, for szip-2.1.1
+
+```
+tar -xvf szip-2.1.1.tar.gz
+```
 
 Load necessary modules
 ```
