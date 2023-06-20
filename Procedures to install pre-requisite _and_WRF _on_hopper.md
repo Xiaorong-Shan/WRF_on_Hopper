@@ -79,8 +79,9 @@ Build a new file to save szip-2.1.1 documents in pre-softwares directory
 mkdir szip-2.1.1
 ```
 
-Start to configure the library
+Start to configure the library in the source_code file
 ```
+cd /projects/HAQ_LAB/xshan2/WRF/pre-softwares/source_code/szip-2.1.1
 ./configure prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/szip-2.1.1
 ```
 
