@@ -159,7 +159,7 @@ module load pgi/18.10
 Download links:
 https://www.hdfgroup.org/downloads/hdfview/?gclid=CjwKCAiA2fjjBRAjEiwAuewS_ZPIkjO-vSQgnLXrSZ68O5I7I6QFaLEpAxcXWmvlhGzzxN3qdXuPDhoCVgIQAvD_BwE#source
 
-1. environment setup
+**1. environment setup**
 (1) Method 1: environment setup method
 export CC=/opt/pgi/linuxpower/18.10/bin/pgcc
 export CXX=/opt/pgi/linuxpower/18.10/bin/pgc++
@@ -168,18 +168,30 @@ export FC=/opt/pgi/linuxpower/18.10/bin/pgf90
 (2) Method 2: adding flags to the configure
 CC=/opt/pgi/linuxpower/18.10/bin/pgcc CXX=/opt/pgi/linuxpower/18.10/bin/pgc++ FC=/opt/pgi/linuxpower/18.10/bin/pgf90
 
-2. configure
-[vy57456@c699login01 hdf5-1.10.4]$ ./configure --enable-fortran --enable-cxx CC=/opt/pgi/linuxpower/18.10/bin/pgcc CXX=/opt/pgi/linuxpower/18.10/bin/pgc++ FC=/opt/pgi/linuxpower/18.10/bin/pgf90 --prefix=/home/vy57456/application/pgi/18.10/hdf5-1.10.4
+**2. configure**
+
+```
+./configure --enable-fortran --enable-cxx CC=/opt/pgi/linuxpower/18.10/bin/pgcc CXX=/opt/pgi/linuxpower/18.10/bin/pgc++ FC=/opt/pgi/linuxpower/18.10/bin/pgf90 --prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/hdf5-1.10.4
+```
  
-3. make
-[vy57456@c699login01 hdf5-1.10.4]$ make &>make.log
- 
-4. make check
-[vy57456@c699login01 hdf5-1.10.4]$ make check &>make_check.log
- 
-5. make install
-[vy57456@c699login01 hdf5-1.10.4]$ make install &>make_install.log
- 
+**3. make**
+
+```
+make &>make.log
+```
+
+**4. make check**
+
+```
+make check &>make_check.log
+```
+
+
+**5. make install**
+
+```
+make install &>make_install.log
+``` 
 
 
 
