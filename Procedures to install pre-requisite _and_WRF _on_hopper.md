@@ -132,6 +132,8 @@ Repeat the similar steps like installing szip-2.1.1
 
 install zlib-1.2.11 using GCC/4.8.2
 https://sourceforge.net/projects/libpng/files/zlib/1.2.11/ 
+
+
 **1. configure**
    
 ```
