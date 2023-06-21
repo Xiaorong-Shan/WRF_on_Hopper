@@ -128,21 +128,35 @@ vi make_install.log
 
 
 ### zlib-1.2.11
+Repeat the similar steps like installing szip-2.1.1
 
 install zlib-1.2.11 using GCC/4.8.2
 https://sourceforge.net/projects/libpng/files/zlib/1.2.11/ 
-1. configure
-(base) [Tue Jun 16 16:57:30 vy57456 zlib-1.2.11]$./configure --prefix=/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/zlib-1.2.11
-2. make test
-(base) [Tue Jun 16 16:58:10 vy57456 zlib-1.2.11]$make test >&make_test.log
-3. make install
-(base) [Tue Jun 16 16:58:28 vy57456 zlib-1.2.11]$make install >&make_install.log
+**1. configure**
+   
+```
+./configure --prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/zlib-1.2.11
+```
 
+**2. make test**
+
+```
+make test >&make_test.log
+```
+
+**3. make install**
+   
+```
+make install >&make_install.log
+```
 ### hdf5-1.10.4
+Repeat the similar steps like installing szip-2.1.1
+
 Installing HDF (hdf5-1.10.4) on WSC using pgi
 module load pgi/18.10
 Download links:
 https://www.hdfgroup.org/downloads/hdfview/?gclid=CjwKCAiA2fjjBRAjEiwAuewS_ZPIkjO-vSQgnLXrSZ68O5I7I6QFaLEpAxcXWmvlhGzzxN3qdXuPDhoCVgIQAvD_BwE#source
+
 1. environment setup
 (1) Method 1: environment setup method
 export CC=/opt/pgi/linuxpower/18.10/bin/pgcc
