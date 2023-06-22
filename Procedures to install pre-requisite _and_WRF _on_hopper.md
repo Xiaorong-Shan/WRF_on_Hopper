@@ -511,18 +511,29 @@ CFLAGS=-openmp -openmp_report0
 LDFLAGS=-lsvml
  
 2.2 fatal error: jasper/jasper.h: No such file or directory
+
 This error is due to missing library file. We need to install or use already installed jasper. Here is the jasper installed on maya, without knowing its compiler and version. But we can setup its environment as
- 
+
+ ```
 export PATH=/usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2/bin:$PATH
+```
  
 And modify configure.wps
 modify to
+
+```
 COMPRESSION_LIBS    = -L/usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2/lib -ljasper -lpng -lz
 COMPRESSION_INC     = -I/usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2/include
+```
  
-The directory /usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2 is getting from wrf/3.7 module. You can have a look in detail using the command
-[vy57456@maya-usr1 WPS]$ vi /usr/cluster/contrib/modulefiles/wrf/3.7
- 
+The directory /usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2 is getting from wrf/3.7 module. 
+
+You can have a look in detail using the command
+
+```
+vi /usr/cluster/contrib/modulefiles/wrf/3.7
+```
+
 2.3 gfortran: error: unrecognized command line option ‘-f90=gfortran’
 OR
 gcc: error: unrecognized command line option ‘-cc=gcc’
