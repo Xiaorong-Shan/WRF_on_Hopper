@@ -206,15 +206,23 @@ Make sure the icc path is the same as the one in bash file
 
 **2. make**
    
- ```
+```
 make |tee make.log
 ```
 
-4. make
-(base) [Wed Jun 17 15:41:02 vy57456 netcdf-4.6.1]$make install |tee make_install.log
- 
+3. make install
+
+```
+make install |tee make_install.log
+```
+
+
 ERROR1: while configuring
-(base) [Tue Jun 16 17:36:00 vy57456 netcdf-4.6.1]$./configure FC=/usr/ebuild/software/GCC/4.8.2/bin/gfortran CXX=/usr/ebuild/software/GCC/4.8.2/bin/c++ LDFLAGS="-L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/lib -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/lib" CPPFLAGS="-I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/include -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/include -mcmodel=large" CFLAGS=' ' --disable-netcdf-4 --prefix=/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1
+
+```
+./configure FC=/usr/ebuild/software/GCC/4.8.2/bin/gfortran CXX=/usr/ebuild/software/GCC/4.8.2/bin/c++ LDFLAGS="-L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/lib -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/lib" CPPFLAGS="-I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/include -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/include -mcmodel=large" CFLAGS=' ' --disable-netcdf-4 --prefix=/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1
+```
+
 checking for gcc... gcc
 checking whether the C compiler works... no
 configure: error: in `/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/source_code/netcdf-4.6.1':
