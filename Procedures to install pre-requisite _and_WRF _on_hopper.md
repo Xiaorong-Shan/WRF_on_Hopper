@@ -172,7 +172,7 @@ CC=/opt/pgi/linuxpower/18.10/bin/pgcc CXX=/opt/pgi/linuxpower/18.10/bin/pgc++ FC
 **2. configure**
 
 ```
-./configure --enable-fortran --enable-cxx CC=/opt/pgi/linuxpower/18.10/bin/pgcc CXX=/opt/pgi/linuxpower/18.10/bin/pgc++ FC=/opt/pgi/linuxpower/18.10/bin/pgf90 --prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/hdf5-1.10.4
+./configure --enable-fortran --enable-cxx --prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/hdf5-1.10.4
 ```
  
 **3. make**
