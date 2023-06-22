@@ -201,7 +201,7 @@ Donwload website: https://downloads.unidata.ucar.edu/netcdf/
 **1. configure**
 
 ```
-./configure FC=/usr/ebuild/software/GCC/4.8.2/bin/gfortran CXX=/usr/ebuild/software/GCC/4.8.2/bin/c++ LDFLAGS="-L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/lib -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/lib" CPPFLAGS="-I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/include -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/include -mcmodel=large" CFLAGS=' ' --disable-netcdf-4 --prefix=/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1
+./configure FC=/usr/ebuild/software/GCC/4.8.2/bin/gfortran CXX=/usr/ebuild/software/GCC/4.8.2/bin/c++ LDFLAGS="-L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/lib -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/lib" CPPFLAGS="-I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/include -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/include -mcmodel=large" CFLAGS=' ' --disable-netcdf-4 --prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/netcdf-4.6.1
 ```
 
 2. make
