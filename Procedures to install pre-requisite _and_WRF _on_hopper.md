@@ -468,35 +468,32 @@ export PATH=/home/vy57456/zzbatmos_user/application/gfortran/mpich-3.2.1./bin:$P
 
 
 
-WRF
-[vy57456@maya-usr1 WRF]$./configure
-[vy57456@maya-usr1 WRF]$./compile em_real 2>&1 |tee compile_em_real.log
+## WRF
 
+```
+./configure
+./compile em_real 2>&1 |tee compile_em_real.log
+```
 
+## WRF-Chem
 
+_(If you do not need WRF-Chem, just skip this step)_
 
+```
+./compile emi_conv 2>&1 |tee compile_emi_conv.log
+```
 
+## WPS
 
+```
+./configure
+./compile >&compile.log
+```
 
+**errors while installing WPS**
 
-WRF-Chem
-(If you do not need WRF-Chem, just skip this step)
-[vy57456@maya-usr1 WRF]$./compile emi_conv 2>&1 |tee compile_emi_conv.log
-
-
-
-
-
-
-
-
-WPS
-
-[vy57456@maya-usr1 WPS]$./configure
-[vy57456@maya-usr1 WPS]$./compile >&compile.log
-
-errors while installing WPS
 2.1 wrf_io.f:(.text+0x1e5): undefined reference to `GOMP_loop_runtime_start'
+
 This error was solved from online help. Here is the link.
 http://forum.wrfforum.com/viewtopic.php?f=20&t=5672
 I had the same problem on Centos 6.4 (64 bit) with gcc+gfortran, with "smpar" option on WRF & "serial" option on WPS. The very simple solution is to add "-lgomp" to the WRF_LIB variable in file configure.wps (just append it after -lnetcdf).
