@@ -377,7 +377,11 @@ configure:4026: $? = 1
 
 configure:4046: checking whether the C compiler works
 
-configure:4068: gcc  -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/include -mcmodel=large -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/lib conftest.c -lhdf5_hl -lhdf5 -lm -lz -lcurl  >&5
+configure:4068: 
+
+```
+gcc  -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/include -mcmodel=large -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/lib conftest.c -lhdf5_hl -lhdf5 -lm -lz -lcurl  >&5
+```
 
 /usr/ebuild/software/binutils/2.30-GCCcore-7.3.0/bin/ld: cannot find -lhdf5_hl
 
