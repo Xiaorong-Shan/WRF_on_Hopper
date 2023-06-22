@@ -43,7 +43,7 @@ tar -xvf szip-2.1.1.tar.gz
 
 Load necessary modules
 ```
-module load
+module load intel/2020.2
 ```
 
 Find CC (icc), FC (ifort) and CXX (icpc) path. 
