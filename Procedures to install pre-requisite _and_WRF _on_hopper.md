@@ -224,41 +224,74 @@ ERROR1: while configuring
 ```
 
 checking for gcc... gcc
+
 checking whether the C compiler works... no
+
 configure: error: in `/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/source_code/netcdf-4.6.1':
+
 configure: error: C compiler cannot create executables
+
 See `config.log' for more details
+
 Here are details in 'config.log'
+
 configure:4492: $? = 0
+
 configure:4481: gcc -v >&5
+
 Using built-in specs.
+
 COLLECT_GCC=gcc
+
 COLLECT_LTO_WRAPPER=/umbc/ebuild-soft/skylake/software/GCC/4.8.2/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.2/lto-wrapper
+
 Target: x86_64-unknown-linux-gnu
+
 Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/usr/ebuild/software/GCC/4.8.2 --with-local-prefix=/usr/ebuild/software/GCC/4.8.2
+
 Thread model: posix
+
 gcc version 4.8.2 (GCC)
+
 configure:4492: $? = 0
+
 configure:4481: gcc -V >&5
+
 gcc: error: unrecognized command line option '-V'
+
 gcc: fatal error: no input files
+
 compilation terminated.
+
 configure:4492: $? = 1
+
 configure:4481: gcc -qversion >&5
+
 gcc: error: unrecognized command line option '-qversion'
+
 gcc: fatal error: no input files
+
 compilation terminated.
+
 configure:4492: $? = 1
+
 configure:4512: checking whether the C compiler works
+
 configure:4534: gcc   -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/include -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/include -mcmodel=large -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/lib -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/lib conftest.c -lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lz -lcurl  >&5
 /usr/ebuild/software/binutils/2.30-GCCcore-7.3.0/bin/ld: cannot find -lmfhdf
 /usr/ebuild/software/binutils/2.30-GCCcore-7.3.0/bin/ld: cannot find -ldf
 collect2: error: ld returned 1 exit status
 SOLUTION: The error is caused by the flags '-lmfhdf' and '-ldf'. Remove these two flags in the LIBS.
-(base) [Wed Jun 17 15:35:31 vy57456 netcdf-4.6.1]$export LIBS="-lhdf5_hl -lhdf5 -lm -lz -lcurl "
-previous it was
-export LIBS="-lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lz -lcurl "
 
+```
+export LIBS="-lhdf5_hl -lhdf5 -lm -lz -lcurl "
+```
+
+previous it was
+
+```
+export LIBS="-lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lz -lcurl "
+```
 
 ### netcdf-fortran-4.4.4
 
