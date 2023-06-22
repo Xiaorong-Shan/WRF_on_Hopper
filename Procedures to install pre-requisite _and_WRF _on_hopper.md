@@ -336,22 +336,24 @@ Install MPICH (mpich-3.2.1) on maya using gcc (module load gcc/4.8.4)
 Download website: https://www.mpich.org/downloads/versions/
 
 **1. environment setup**
+
 setup C compiler
+
 module load gcc/4.8.4
  
-2. configure
+**2. configure**
 
 ```
 ./configure --prefix=/home/vy57456/zzbatmos_user/application/gfortran/mpich-3.2.1 CC=icc CXX=icpc FC=ifort F77=ifort &>configure.log 
 ```
 
-3. make
+**3. make**
    
 ```
 make 2>&1 | tee m.txt
 ```
 
-4. make install
+**4. make install**
 
 ```
 make install 2>&1 | tee mi.txt
