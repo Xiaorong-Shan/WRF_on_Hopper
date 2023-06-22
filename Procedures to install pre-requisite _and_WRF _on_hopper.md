@@ -492,7 +492,7 @@ _(If you do not need WRF-Chem, just skip this step)_
 
 **errors while installing WPS**
 
-2.1 wrf_io.f:(.text+0x1e5): undefined reference to `GOMP_loop_runtime_start'
+__2.1 wrf_io.f:(.text+0x1e5): undefined reference to `GOMP_loop_runtime_start'__
 
 This error was solved from online help. Here is the link.
 http://forum.wrfforum.com/viewtopic.php?f=20&t=5672
@@ -510,7 +510,7 @@ For icc you would use
 CFLAGS=-openmp -openmp_report0
 LDFLAGS=-lsvml
  
-2.2 fatal error: jasper/jasper.h: No such file or directory
+__2.2 fatal error: jasper/jasper.h: No such file or directory__
 
 This error is due to missing library file. We need to install or use already installed jasper. Here is the jasper installed on maya, without knowing its compiler and version. But we can setup its environment as
 
@@ -534,10 +534,11 @@ You can have a look in detail using the command
 vi /usr/cluster/contrib/modulefiles/wrf/3.7
 ```
 
-2.3 gfortran: error: unrecognized command line option ‘-f90=gfortran’
-OR
-gcc: error: unrecognized command line option ‘-cc=gcc’
-This error was solved from online help. Here is the link.
+__2.3 gfortran: error: unrecognized command line option ‘-f90=gfortran’
+OR gcc: error: unrecognized command line option ‘-cc=gcc’__
+
+This error was solved from online help. 
+Here is the link.
 http://forum.wrfforum.com/viewtopic.php?f=5&t=1501
  
 Try to remove "-f90=$(SFC)" and "-cc=$(SCC)" from configure.wrf.
