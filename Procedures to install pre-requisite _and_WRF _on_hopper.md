@@ -324,53 +324,102 @@ make install |tee make_install.log
 ```
 
 ERROR1 while configure
+
 checking for gcc... gcc
+
 checking whether the C compiler works... no
+
 configure: error: in `/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/source_code/netcdf-fortran-4.4.4':
+
 configure: error: C compiler cannot create executables
+
 See `config.log' for more details
+
 configure:4026: $? = 0
+
 configure:4015: gcc -v >&5
+
 Using built-in specs.
+
 COLLECT_GCC=gcc
+
 COLLECT_LTO_WRAPPER=/umbc/ebuild-soft/skylake/software/GCC/4.8.2/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.2/lto-wrapper
+
 Target: x86_64-unknown-linux-gnu
+
 Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/usr/ebuild/software/GCC/4.8.2 --with-local-prefix=/usr/ebuild/software/GCC/4.8.2
+
 Thread model: posix
+
 gcc version 4.8.2 (GCC)
+
 configure:4026: $? = 0
+
 configure:4015: gcc -V >&5
+
 gcc: error: unrecognized command line option '-V'
+
 gcc: fatal error: no input files
+
 compilation terminated.
+
 configure:4026: $? = 1
+
 configure:4015: gcc -qversion >&5
+
 gcc: error: unrecognized command line option '-qversion'
+
 gcc: fatal error: no input files
+
 compilation terminated.
+
 configure:4026: $? = 1
+
 configure:4046: checking whether the C compiler works
+
 configure:4068: gcc  -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/include -mcmodel=large -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/lib conftest.c -lhdf5_hl -lhdf5 -lm -lz -lcurl  >&5
+
 /usr/ebuild/software/binutils/2.30-GCCcore-7.3.0/bin/ld: cannot find -lhdf5_hl
+
 /usr/ebuild/software/binutils/2.30-GCCcore-7.3.0/bin/ld: cannot find -lhdf5
+
 collect2: error: ld returned 1 exit status
+
 configure:4072: $? = 1
+
 configure:4110: result: no
+
 configure: failed program was:
+
 | /* confdefs.h */
+
 | #define PACKAGE_NAME "netCDF-Fortran"
+
 | #define PACKAGE_TARNAME "netcdf-fortran"
+
 | #define PACKAGE_VERSION "4.4.4"
+
 | #define PACKAGE_STRING "netCDF-Fortran 4.4.4"
+
 | #define PACKAGE_BUGREPORT "support-netcdf@unidata.ucar.edu"
+
 | #define PACKAGE_URL ""
+
 | #define PACKAGE "netcdf-fortran"
+
 | #define VERSION "4.4.4"
+
 | /* end confdefs.h.  */
+
 SOLUTION1:
+
 The issue was caused by the flags "-lhdf5_hl" and "-lhdf5"
+
 set LIBS as
-(base) [Wed Jun 17 15:52:46 vy57456 netcdf-fortran-4.4.4]$export LIBS="-lm -lz -lcurl "
+
+```
+export LIBS="-lm -lz -lcurl "
+```
 
 ### mpich-3.2.1
 Install MPICH (mpich-3.2.1) on maya using gcc (module load gcc/4.8.4)
