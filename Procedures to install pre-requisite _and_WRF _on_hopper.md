@@ -490,7 +490,7 @@ _(If you do not need WRF-Chem, just skip this step)_
 ./compile >&compile.log
 ```
 
-**errors while installing WPS**
+### errors while installing WPS
 
 __2.1 wrf_io.f:(.text+0x1e5): undefined reference to `GOMP_loop_runtime_start'__
 
