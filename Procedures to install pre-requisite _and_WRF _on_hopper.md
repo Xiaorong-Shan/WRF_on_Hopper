@@ -256,16 +256,32 @@ export LIBS="-lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lz -lcurl "
 
 Install netcdf-fortran-4.4.4
 Download website: https://github.com/Unidata/netcdf-fortran/tags 
-1. environment setup
-(base) [Wed Jun 17 15:44:47 vy57456 netcdf-fortran-4.4.4]$export LD_LIBRARY_PATH="/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/lib:${LD_LIBRARY_PATH}"
-(base) [Wed Jun 17 15:44:50 vy57456 netcdf-fortran-4.4.4]$export CPPFLAGS="-I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/include -mcmodel=large"
-(base) [Wed Jun 17 15:46:01 vy57456 netcdf-fortran-4.4.4]$export LDFLAGS="-L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1/lib"
-2. configure
-(base) [Wed Jun 17 15:56:50 vy57456 netcdf-fortran-4.4.4]$./configure CC=/usr/ebuild/software/GCC/4.8.2/bin/gcc FC=/usr/ebuild/software/GCC/4.8.2/bin/gfortran CXX=/usr/ebuild/software/GCC/4.8.2/bin/c++ --prefix=/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/netcdf-4.6.1 |tee configure.log
-3. make
-(base) [Wed Jun 17 15:56:50 vy57456 netcdf-fortran-4.4.4]$make |tee make.log
-4. make install
-(base) [Wed Jun 17 15:56:50 vy57456 netcdf-fortran-4.4.4]$make install |tee make_install.log
+
+**1. environment setup**
+
+```
+export LD_LIBRARY_PATH="/projects/HAQ_LAB/xshan2/WRF/pre-softwares/netcdf-4.6.1/lib:${LD_LIBRARY_PATH}"
+export CPPFLAGS="-I/projects/HAQ_LAB/xshan2/WRF/pre-softwares/netcdf-4.6.1/include -mcmodel=large"
+export LDFLAGS="-L/projects/HAQ_LAB/xshan2/WRF/pre-softwares/netcdf-4.6.1/lib"
+```
+
+**2. configure**
+```
+./configure --prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/netcdf-4.6.1 |tee configure.log
+```
+
+**3. make**
+
+```
+make |tee make.log
+```
+
+**4. make install**
+   
+```
+make install |tee make_install.log
+```
+
 ERROR1 while configure
 checking for gcc... gcc
 checking whether the C compiler works... no
@@ -319,18 +335,27 @@ set LIBS as
 Install MPICH (mpich-3.2.1) on maya using gcc (module load gcc/4.8.4)
 Download website: https://www.mpich.org/downloads/versions/
 
-1. environment setup
+**1. environment setup**
 setup C compiler
 module load gcc/4.8.4
  
 2. configure
-[vy57456@maya-usr1 mpich-3.2.1]$ ./configure --prefix=/home/vy57456/zzbatmos_user/application/gfortran/mpich-3.2.1 CC=gcc CXX=g++ FC=gfortran F77=gfortran &>configure.log 
- 
+
+```
+./configure --prefix=/home/vy57456/zzbatmos_user/application/gfortran/mpich-3.2.1 CC=icc CXX=icpc FC=ifort F77=ifort &>configure.log 
+```
+
 3. make
-[vy57456@maya-usr1 mpich-3.2.1]$ make 2>&1 | tee m.txt
- 
+   
+```
+make 2>&1 | tee m.txt
+```
+
 4. make install
-[vy57456@maya-usr1 mpich-3.2.1]$make install 2>&1 | tee mi.txt
+
+```
+make install 2>&1 | tee mi.txt
+```
  
 NOTE: You need to manually specify the C and FORTRAN compiler, since if you do not specify, the configuration may the default compiler which may be not what you want. And you may have the following error due to the mix of ifort and gcc.
  
