@@ -247,7 +247,11 @@ COLLECT_LTO_WRAPPER=/umbc/ebuild-soft/skylake/software/GCC/4.8.2/bin/../libexec/
 
 Target: x86_64-unknown-linux-gnu
 
-Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/usr/ebuild/software/GCC/4.8.2 --with-local-prefix=/usr/ebuild/software/GCC/4.8.2
+Configured with: 
+
+```
+../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/usr/ebuild/software/GCC/4.8.2 --with-local-prefix=/usr/ebuild/software/GCC/4.8.2
+```
 
 Thread model: posix
 
@@ -277,10 +281,18 @@ configure:4492: $? = 1
 
 configure:4512: checking whether the C compiler works
 
-configure:4534: gcc   -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/include -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/include -mcmodel=large -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/lib -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/lib conftest.c -lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lz -lcurl  >&5
+configure:4534: 
+
+```
+gcc   -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/include -I/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/include -mcmodel=large -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/hdf5-1.10.4/lib -L/home/vy57456/zzbatmos_user/application/gfortran/4.8.2/szip-2.1.1/lib conftest.c -lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lz -lcurl  >&5
+```
+
 /usr/ebuild/software/binutils/2.30-GCCcore-7.3.0/bin/ld: cannot find -lmfhdf
+
 /usr/ebuild/software/binutils/2.30-GCCcore-7.3.0/bin/ld: cannot find -ldf
+
 collect2: error: ld returned 1 exit status
+
 SOLUTION: The error is caused by the flags '-lmfhdf' and '-ldf'. Remove these two flags in the LIBS.
 
 ```
@@ -347,7 +359,11 @@ COLLECT_LTO_WRAPPER=/umbc/ebuild-soft/skylake/software/GCC/4.8.2/bin/../libexec/
 
 Target: x86_64-unknown-linux-gnu
 
-Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/usr/ebuild/software/GCC/4.8.2 --with-local-prefix=/usr/ebuild/software/GCC/4.8.2
+Configured with: 
+
+```
+../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/usr/ebuild/software/GCC/4.8.2 --with-local-prefix=/usr/ebuild/software/GCC/4.8.2
+```
 
 Thread model: posix
 
