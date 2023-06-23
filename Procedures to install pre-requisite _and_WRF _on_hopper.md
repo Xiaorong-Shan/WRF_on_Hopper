@@ -206,7 +206,10 @@ Install netcdf-4.6.1 (C) using GCC/4.8.2
 Donwload website: https://downloads.unidata.ucar.edu/netcdf/ 
 
 **1. configure**
+
 Make sure the icc path is the same as the one in bash file
+
+Warning: be sure to install the hdf5-1.10.4, szip-2.1.1 before this steps.
 ```
 ./configure LDFLAGS="-L/projects/HAQ_LAB/xshan2/WRF/pre-softwares/hdf5-1.10.4/lib -L/projects/HAQ_LAB/xshan2/WRF/pre-softwares/szip-2.1.1/lib" CPPFLAGS="-I/projects/HAQ_LAB/xshan2/WRF/pre-softwares/hdf5-1.10.4/include -I/projects/HAQ_LAB/xshan2/WRF/pre-softwares/szip-2.1.1/include -mcmodel=large" CFLAGS=' ' --disable-netcdf-4 --prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/netcdf-4.6.1
 ```
