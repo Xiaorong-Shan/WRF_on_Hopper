@@ -104,6 +104,13 @@ check if there's any error
 vi make.log
 ```
 
+You can use search command to find the key words in mak.log file. For example, if you want to find error, type
+
+```
+:/error
+```
+type 'n' to find the next, type 'G' to go to the end of script.
+
 **3. make check**
 
 ```
