@@ -464,7 +464,7 @@ module load gcc/4.8.4
 **2. configure**
 
 ```
-./configure --prefix=/home/vy57456/zzbatmos_user/application/gfortran/mpich-3.2.1 CC=icc CXX=icpc FC=ifort F77=ifort &>configure.log 
+./configure --prefix=/projects/HAQ_LAB/xshan2/WRF/pre-softwares/mpich-3.2.1 CC=icc CXX=icpc FC=ifort F77=ifort &>configure.log 
 ```
 
 **3. make**
