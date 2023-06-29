@@ -56,6 +56,7 @@ which icpc
 Go into bash file
 ```
 vi ~/.bashrc
+. ~/.bashrc
 ```
 
 Put the following path into bash file with vi
