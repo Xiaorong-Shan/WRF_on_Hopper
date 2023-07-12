@@ -11,6 +11,5 @@ Go into the session and open the terminal. Then type
 module load intel
 module load impi
 module load ncview
-
 ```
 Then type ncview with script path and name to run it,
