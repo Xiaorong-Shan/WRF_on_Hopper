@@ -503,6 +503,11 @@ export PATH=/home/vy57456/zzbatmos_user/application/gfortran/mpich-3.2.1./bin:$P
 
 ```
 ./configure
+```
+
+Choose 15 INTEL (dmpar) and then choose 1
+
+```
 ./compile em_real 2>&1 |tee compile_em_real.log
 ```
 
