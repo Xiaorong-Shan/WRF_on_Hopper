@@ -511,6 +511,18 @@ Choose 15 INTEL (dmpar) and then choose 1
 ./compile em_real 2>&1 |tee compile_em_real.log
 ```
 
+Solve compile error steps
+
+Issue a ‘clean -a’ and then reconfigure. Then go into your configure.wrf file and look for the line:
+CFLAGS = $(CFLAGS_LOCAL) -DDM_PARALLEL -DSTUBMPI \
+-DMAX_HISTORY=$(MAX_HISTORY) -DNMM_CORE=$(WRF_NMM_CORE)
+
+Onto the end of that, add -DLANDREAD_STUFF, so that it now looks like:
+CFLAGS = $(CFLAGS_LOCAL) -DDM_PARALLEL -DSTUBMPI \
+-DMAX_HISTORY=$(MAX_HISTORY) -DNMM_CORE=$(WRF_NMM_CORE) -DLANDREAD_STUB
+
+Then save that configure file and recompile.
+
 ## WRF-Chem
 
 _(If you do not need WRF-Chem, just skip this step)_
