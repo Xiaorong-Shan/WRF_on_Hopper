@@ -513,7 +513,7 @@ Choose 15 INTEL (dmpar) and then choose 1
 
 Solve compile error steps
 
-Issue a ‘clean -a’ and then reconfigure. Then go into your configure.wrf file and look for the line:
+Issue a ‘./clean -a’ and then reconfigure. Then go into your configure.wrf file and look for the line:
 CFLAGS = $(CFLAGS_LOCAL) -DDM_PARALLEL -DSTUBMPI \
 -DMAX_HISTORY=$(MAX_HISTORY) -DNMM_CORE=$(WRF_NMM_CORE)
 
