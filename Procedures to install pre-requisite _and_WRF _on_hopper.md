@@ -537,6 +537,8 @@ _(If you do not need WRF-Chem, just skip this step)_
 ./configure
 ./compile >&compile.log
 ```
+COMPRESSION_LIBS    = -L/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/jasper-2.0.16-tw/lib -ljasper -L/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/libpng-1.6.37-vu/lib -lpng -L/projects/HAQ_LAB/xshan2/WRF/pre-softwares/zlib-1.2.11/lib -lz
+COMPRESSION_INC     = -I/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/jasper-2.0.16-tw/include -I/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/libpng-1.6.37-vu/include -I/projects/HAQ_LAB/xshan2/WRF/pre-softwares/zlib-1.2.11/include
 
 ### errors while installing WPS
 
