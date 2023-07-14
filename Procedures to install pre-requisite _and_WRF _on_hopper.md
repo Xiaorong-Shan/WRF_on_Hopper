@@ -510,16 +510,29 @@ Choose 15 INTEL (dmpar) and then choose 1
 ```
 ./compile em_real 2>&1 |tee compile_em_real.log
 ```
+### errors while installing WRF
 
-Solve compile error steps
+__Fedora 28: landread error__
 
-Issue a ‘./clean -a’ and then reconfigure. Then go into your configure.wrf file and look for the line:
+This error was solved from online help. Here is the link.
+https://forum.mmm.ucar.edu/threads/resolved-problem-compiling-wrfv4-0-on-fedora-28-landread-error.61/
+
+Issue a 
+
+```
+./clean -a
+```
+
+Then reconfigure. Then go into your configure.wrf file and look for the line:
 CFLAGS = $(CFLAGS_LOCAL) -DDM_PARALLEL -DSTUBMPI \
 -DMAX_HISTORY=$(MAX_HISTORY) -DNMM_CORE=$(WRF_NMM_CORE)
 
 Onto the end of that, add -DLANDREAD_STUFF, so that it now looks like:
+
+```
 CFLAGS = $(CFLAGS_LOCAL) -DDM_PARALLEL -DSTUBMPI \
 -DMAX_HISTORY=$(MAX_HISTORY) -DNMM_CORE=$(WRF_NMM_CORE) -DLANDREAD_STUB
+```
 
 Then save that configure file and recompile.
 
