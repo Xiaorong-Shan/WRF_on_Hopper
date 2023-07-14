@@ -537,63 +537,33 @@ _(If you do not need WRF-Chem, just skip this step)_
 ./configure
 ./compile >&compile.log
 ```
-COMPRESSION_LIBS    = -L/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/jasper-2.0.16-tw/lib -ljasper -L/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/libpng-1.6.37-vu/lib -lpng -L/projects/HAQ_LAB/xshan2/WRF/pre-softwares/zlib-1.2.11/lib -lz
-COMPRESSION_INC     = -I/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/jasper-2.0.16-tw/include -I/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/libpng-1.6.37-vu/include -I/projects/HAQ_LAB/xshan2/WRF/pre-softwares/zlib-1.2.11/include
 
 ### errors while installing WPS
 
-__2.1 wrf_io.f:(.text+0x1e5): undefined reference to `GOMP_loop_runtime_start'__
+__fatal error: jasper/jasper.h: No such file or directory__
 
 This error was solved from online help. Here is the link.
-http://forum.wrfforum.com/viewtopic.php?f=20&t=5672
-I had the same problem on Centos 6.4 (64 bit) with gcc+gfortran, with "smpar" option on WRF & "serial" option on WPS. The very simple solution is to add "-lgomp" to the WRF_LIB variable in file configure.wps (just append it after -lnetcdf).
- 
-modify from
-                        -L$(NETCDF)/lib -lnetcdff -lnetcdf
-to
-                        -L$(NETCDF)/lib -lnetcdff -lnetcdf -lgomp
-Similarly, flag -lgomp is related to openmp.
-Setting these GCC compiler flags should turn on OpenMP
-CFLAGS=-fopenmp
-LDFLAGS=-lgomp
-For icc you would use
-CFLAGS=-openmp -openmp_report0
-LDFLAGS=-lsvml
- 
-__2.2 fatal error: jasper/jasper.h: No such file or directory__
+[http://forum.wrfforum.com/viewtopic.php?f=20&t=5672](https://forum.mmm.ucar.edu/threads/resolved-no-ungrib-exe-compiled-cannot-open-source-file-jasper-jasper-h.5306/)
 
-This error is due to missing library file. We need to install or use already installed jasper. Here is the jasper installed on maya, without knowing its compiler and version. But we can setup its environment as
+Open the bashrc file
 
- ```
-export PATH=/usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2/bin:$PATH
 ```
- 
+vi ~/.bashrc
+```
+
+Load necessary modules
+
+```
+module load intel/2020.2
+module load jasper/2.0.16-tw
+```
 And modify configure.wps
-modify to
+modify to add -ljasper -lpng -lz path
 
 ```
-COMPRESSION_LIBS    = -L/usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2/lib -ljasper -lpng -lz
-COMPRESSION_INC     = -I/usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2/include
+COMPRESSION_LIBS    = -L/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/jasper-2.0.16-tw/lib -ljasper -L/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/libpng-1.6.37-vu/lib -lpng -L/projects/HAQ_LAB/xshan2/WRF/pre-softwares/zlib-1.2.11/lib -lz
+COMPRESSION_INC     = -I/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/jasper-2.0.16-tw/include -I/opt/sw/spack/apps/linux-centos8-cascadelake/intel-20.0.2/libpng-1.6.37-vu/include -I/projects/HAQ_LAB/xshan2/WRF/pre-softwares/zlib-1.2.11/include
 ```
- 
-The directory /usr/cluster/contrib/wrf/Build_WRF/LIBRARIES/grib2 is getting from wrf/3.7 module. 
-
-You can have a look in detail using the command
-
-```
-vi /usr/cluster/contrib/modulefiles/wrf/3.7
-```
-
-__2.3 gfortran: error: unrecognized command line option ‘-f90=gfortran’
-OR gcc: error: unrecognized command line option ‘-cc=gcc’__
-
-This error was solved from online help. 
-Here is the link.
-http://forum.wrfforum.com/viewtopic.php?f=5&t=1501
- 
-Try to remove "-f90=$(SFC)" and "-cc=$(SCC)" from configure.wrf.
-I think this happens when using OpenMPI.
-
 
 
 
